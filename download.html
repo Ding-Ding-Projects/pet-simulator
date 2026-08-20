@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download — Pet Simulator</title>
+  <meta name="description" content="Download Pet Simulator for Windows. No release exists yet; this page says so honestly.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/material-pet-simulator.ico">
+  <meta name="theme-color" content="#9a4d00">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <img class="mark" src="social-preview.png" alt="" style="object-fit:cover;object-position:8% 50%;">
+    <span class="name">Pet Simulator</span>
+    <nav class="site" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="download.html" aria-current="page">Download</a>
+      <a href="refund-policy.html">Refunds</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Download</h1>
+
+    <div class="card high" role="note">
+      <strong>There is no release yet.</strong> The game is in active development and no installer
+      has been published. This button will go live with the first release — it is shown disabled
+      now rather than hidden, so you can see exactly what this page will become.
+    </div>
+
+    <p>
+      <a class="button" aria-disabled="true" role="link" href="#" onclick="return false"
+         title="No release exists yet — this control activates with the first published release">
+        Download for Windows — not yet available
+      </a>
+    </p>
+    <p class="note">When live: Windows 10/11, 64-bit. Delivered as a Squirrel installer from a
+      GitHub release on this repository, with the version number and SHA-256 checksum printed
+      beside the button.</p>
+
+    <h2>About the unknown-publisher warning</h2>
+    <p>The installer is <strong>unsigned</strong> — no code-signing certificate is purchased for
+      this project, deliberately. When you run it, Windows SmartScreen will show
+      <em>"Windows protected your PC"</em> with an unknown publisher. That warning is expected and
+      does not indicate anything is wrong with the file you downloaded from this page:</p>
+    <ol>
+      <li>Click <strong>More info</strong> on the SmartScreen dialog.</li>
+      <li>Check the app name shown, then click <strong>Run anyway</strong>.</li>
+      <li>To verify the download first, compare its SHA-256 against the checksum published beside
+        the download button (in PowerShell: <code>Get-FileHash .\MaterialPetSimulator-Setup.exe</code>).</li>
+    </ol>
+
+    <h2>What installs</h2>
+    <ul>
+      <li>The complete, free base game — playable offline immediately, no account, no sign-up.</li>
+      <li>Automatic updates, downloaded in the background and applied only when you choose to
+        restart. An update never crosses a paid major-version boundary without asking you first.</li>
+    </ul>
+  </main>
+
+  <footer class="site">
+    <p>© 2026 Pet Simulator · <a href="index.html">Home</a> ·
+      <a href="refund-policy.html">Refunds</a> · <a href="privacy.html">Privacy</a> ·
+      <a href="terms.html">Terms</a></p>
+  </footer>
+</div>
+</body>
+</html>

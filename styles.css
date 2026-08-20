@@ -1,0 +1,95 @@
+/* Material Pet Simulator — public site. Material Design 3 flavoured, no external
+   assets: no CDN, no remote fonts, no analytics, no tracking of any kind. */
+:root {
+  --md-primary: #9a4d00;
+  --md-on-primary: #ffffff;
+  --md-primary-container: #ffdcc2;
+  --md-on-primary-container: #331300;
+  --md-surface: #fff8f4;
+  --md-on-surface: #221a14;
+  --md-surface-container: #fceee2;
+  --md-surface-container-high: #f6e8dc;
+  --md-outline: #857365;
+  --md-tertiary: #5d4037;
+  --radius: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-primary: #ffb77c;
+    --md-on-primary: #522300;
+    --md-primary-container: #753500;
+    --md-on-primary-container: #ffdcc2;
+    --md-surface: #19120c;
+    --md-on-surface: #efe0d5;
+    --md-surface-container: #261e16;
+    --md-surface-container-high: #31281f;
+    --md-outline: #9f8d7c;
+    --md-tertiary: #e7bdb0;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Segoe UI Variable", "Segoe UI", Roboto, system-ui, sans-serif;
+  background: var(--md-surface);
+  color: var(--md-on-surface);
+  line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px 64px; }
+header.site {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 20px 0; border-bottom: 1px solid var(--md-outline);
+}
+header.site .mark { width: 40px; height: 40px; border-radius: 12px; }
+header.site .name { font-size: 1.15rem; font-weight: 650; }
+nav.site { margin-left: auto; display: flex; gap: 4px; flex-wrap: wrap; }
+nav.site a {
+  color: var(--md-on-surface); text-decoration: none; font-size: .95rem;
+  padding: 8px 14px; border-radius: 999px; min-height: 44px;
+  display: inline-flex; align-items: center;
+}
+nav.site a:hover, nav.site a:focus-visible { background: var(--md-surface-container-high); }
+nav.site a[aria-current="page"] { background: var(--md-primary-container); color: var(--md-on-primary-container); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--md-primary); outline-offset: 2px; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.2; margin: 32px 0 8px; }
+h2 { font-size: 1.35rem; margin-top: 40px; }
+h3 { font-size: 1.1rem; }
+.lede { font-size: 1.12rem; max-width: 60ch; }
+.card {
+  background: var(--md-surface-container); border-radius: var(--radius);
+  padding: 20px 22px; margin: 16px 0;
+}
+.card.high { background: var(--md-surface-container-high); }
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.price {
+  background: var(--md-surface-container-high); border-radius: var(--radius);
+  padding: 18px; text-align: center;
+}
+.price .amount { font-size: 1.6rem; font-weight: 700; color: var(--md-primary); }
+.price .gems { font-size: .95rem; }
+.badge {
+  display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: .85rem;
+  background: var(--md-primary-container); color: var(--md-on-primary-container);
+  margin: 2px 4px 2px 0;
+}
+.button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0 24px; border-radius: 999px; border: 0;
+  background: var(--md-primary); color: var(--md-on-primary);
+  font-size: 1rem; font-weight: 600; text-decoration: none; cursor: pointer;
+}
+.button[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+.button.tonal { background: var(--md-primary-container); color: var(--md-on-primary-container); }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--md-outline); vertical-align: top; }
+.note { font-size: .95rem; opacity: .92; }
+footer.site { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--md-outline); font-size: .92rem; }
+.overflow-x { overflow-x: auto; }
+@media (max-width: 480px) {
+  header.site { gap: 8px; }
+  nav.site { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

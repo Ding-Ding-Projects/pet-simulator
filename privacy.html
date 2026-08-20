@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy — Pet Simulator</title>
+  <meta name="description" content="Playing is anonymous and offline. Accounts exist only for purchases and online features. Everything the anti-cheat sends is shown to you.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/material-pet-simulator.ico">
+  <meta name="theme-color" content="#9a4d00">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <img class="mark" src="social-preview.png" alt="" style="object-fit:cover;object-position:8% 50%;">
+    <span class="name">Pet Simulator</span>
+    <nav class="site" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="download.html">Download</a>
+      <a href="refund-policy.html">Refunds</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Privacy</h1>
+    <p class="lede">The short version: <strong>playing collects nothing.</strong> The whole game
+      runs offline with no account, forever. Data collection begins only if you sign in — and
+      signing in is only needed to spend money or use online features.</p>
+
+    <h2>Playing without an account</h2>
+    <p>No data leaves your machine. No analytics, no telemetry, no crash reporting, no identifiers.
+      The game and this website make no third-party requests at all.</p>
+
+    <h2>If you create an account</h2>
+    <ul>
+      <li><strong>Sign-in</strong> is via Google, Microsoft, Apple, or email. We store an opaque
+        account id, never the provider's raw identifiers; with email sign-in we store your email
+        address and a modern password hash (or a passkey, which we recommend — no password exists
+        at all then).</li>
+      <li><strong>Purchases</strong> are processed by Stripe or Coinbase Commerce. Card details
+        never touch our servers. We store the order record needed for delivery and refunds.</li>
+      <li><strong>Cloud saves, leaderboards, trading</strong> store the game data those features
+        need, attached to your opaque account id.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>The base game is playable by anyone with no account and therefore no data collection. A
+      neutral age gate runs at first launch. Accounts for children under 13 require verifiable
+      parental consent before the account exists or spends anything; under-18 accounts carry a
+      monthly spending cap; every purchase states the real currency amount before charging.</p>
+
+    <h2>The anti-cheat, in the open</h2>
+    <p>Online features are protected by an integrity system whose defining property is that you can
+      see all of it:</p>
+    <ul>
+      <li><strong>Consent first:</strong> nothing is sent until you have seen a plain-language list
+        of every field with its live values and agreed. Decline, and the entire game remains
+        playable offline forever.</li>
+      <li><strong>A live transparency panel</strong> in settings shows every field with the actual
+        current values on your machine — including the device fingerprint hash and which hardware
+        values feed it — plus a log of every transmission with its full payload.</li>
+      <li><strong>What crosses the wire:</strong> a fingerprint hash, progress snapshot numbers, and
+        three true/false verdicts. Never a list of your processes, windows, or software — the
+        payload format structurally cannot carry one.</li>
+      <li><strong>Open source:</strong> the entire client-side integrity code is published in a
+        public repository, and the panel links the exact commit your build runs.</li>
+      <li><strong>Honesty note:</strong> a device fingerprint computed on your machine is treated as
+        a corroborating signal only — we say this because pretending it is proof would be false.</li>
+    </ul>
+
+    <h2>Your data, your exports</h2>
+    <p>Export and import of your own save data is free for everyone, permanently, and never gated by
+      any purchase. Account deletion removes the account record and its server-side data; local
+      saves are yours and stay on your machine.</p>
+
+    <h2>Where data lives</h2>
+    <p>Server-side data is held on infrastructure operated by Pet Simulator, with payment
+      processing by Stripe and Coinbase Commerce under their own privacy policies.</p>
+  </main>
+
+  <footer class="site">
+    <p>© 2026 Pet Simulator · <a href="index.html">Home</a> ·
+      <a href="refund-policy.html">Refunds</a> · <a href="terms.html">Terms</a></p>
+  </footer>
+</div>
+</body>
+</html>
