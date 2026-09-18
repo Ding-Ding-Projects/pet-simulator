@@ -32,6 +32,15 @@ The required public handoff and roadmap were added as the only task-owned change
 - `git ls-remote origin refs/heads/main` was used to verify the remote default ref.
 - GitHub issue inventory was empty.
 
+## External archive
+
+- Archive: `C:\Users\cntow\OneDrive\OakKayBackups\material-pet-simulator-public\zips\material-pet-simulator-public-20260918T172212Z.7z`
+- Archive size: `114857` bytes
+- Full integrity test: `7z t` completed successfully
+- Archive contents: 67 files and 43 folders, with 111 listed path entries
+- Source inventory: 13 explicit tracked or non-ignored source paths plus the Git administrative directory
+- The archive contains a non-empty `.git` payload and was read back before any cleanup decision.
+
 ## External surfaces
 
 No GitHub wiki source or GitHub Pages source exists in this checkout. No release work, installer work, deployment, or unrelated external mutation was performed.
